@@ -6,26 +6,25 @@ metadata:
 
 projects:
 
-- name: catalog
-  git:
-    remotes:
-      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
+# - name: catalog
+#   git:
+#     remotes:
+#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
 
 - name: ai-basics
-  clonePath: docs/labs
   git:
     remotes:
       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics.git
 
-- name: demo1
-  git:
-    remotes:
-      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo1.git
+# - name: demo1
+#   git:
+#     remotes:
+#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo1.git
 
-- name: demo2
-  git:
-    remotes:
-      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo2.git
+# - name: demo2
+#   git:
+#     remotes:
+#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo2.git
 
 components:
   - name: tools
