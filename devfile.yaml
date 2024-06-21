@@ -66,8 +66,7 @@ components:
           value: '5001'
         - name: WALKTHROUGH_LOCATIONS
           value: >-
-            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo1?walkthroughsFolder=/docs/labs,
-            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo2?walkthroughsFolder=/docs/labs,
+            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics?walkthroughsFolder=/docs/labs,
             https://github.com/RedHat-Middleware-Workshops/devsandbox-camel?walkthroughsFolder=/docs/labs
       endpoints:
         - name: tutorial
