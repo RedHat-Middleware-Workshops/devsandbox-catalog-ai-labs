@@ -12,6 +12,7 @@ projects:
       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
 
 - name: ai-basics
+  clonePath: docs/labs
   git:
     remotes:
       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics.git
