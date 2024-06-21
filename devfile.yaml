@@ -9,7 +9,12 @@ projects:
 - name: catalog
   git:
     remotes:
-      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-demo.git
+      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
+
+- name: ai-basics
+  git:
+    remotes:
+      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics.git
 
 - name: demo1
   git:
