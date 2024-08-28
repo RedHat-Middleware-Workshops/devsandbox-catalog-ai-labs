@@ -16,20 +16,11 @@ projects:
     remotes:
       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics.git
 
-- name: llm-basics
-  git:
-    remotes:
-      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics.git
-
-# - name: demo1
+# - name: llm-basics
 #   git:
 #     remotes:
-#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo1.git
+#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics.git
 
-# - name: demo2
-#   git:
-#     remotes:
-#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-demo2.git
 
 components:
   - name: tools
@@ -71,12 +62,11 @@ components:
           value: '5001'
         - name: WALKTHROUGH_LOCATIONS
           value: >-
-            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics?walkthroughsFolder=/docs/labs,
-            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics?walkthroughsFolder=/docs/labs
+            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics?walkthroughsFolder=/docs/labs
 
 #          value: >-
 #            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics?walkthroughsFolder=/docs/labs,
-#            https://github.com/RedHat-Middleware-Workshops/devsandbox-camel?walkthroughsFolder=/docs/labs
+#            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics?walkthroughsFolder=/docs/labs
 
       endpoints:
         - name: tutorial
