@@ -6,10 +6,10 @@ metadata:
 
 projects:
 
-# - name: catalog
-#   git:
-#     remotes:
-#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
+- name: catalog
+  git:
+    remotes:
+      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
 
 - name: ai-basics
   git:
