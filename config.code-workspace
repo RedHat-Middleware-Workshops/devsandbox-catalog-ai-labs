@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "../demo1"
+			"path": "../ai-basics"
 		},
 		{
-			"path": "../demo2"
+			"path": "../llm-basics"
 		}
 	]
 }
