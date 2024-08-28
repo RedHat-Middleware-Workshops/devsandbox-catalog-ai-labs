@@ -6,10 +6,10 @@ metadata:
 
 projects:
 
-- name: catalog
-  git:
-    remotes:
-      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
+# - name: catalog
+#   git:
+#     remotes:
+#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
 
 - name: ai-basics
   git:
@@ -46,8 +46,8 @@ components:
             -Duser.home=/home/user"
         - name: MAVEN_OPTS
           value: $(JAVA_OPTS)
-        - name: VSCODE_DEFAULT_WORKSPACE
-          value: "/projects/catalog/config.code-workspace"
+        # - name: VSCODE_DEFAULT_WORKSPACE
+        #   value: "/projects/catalog/config.code-workspace"
       endpoints:
         - exposure: public
           name: 8080-tcp
