@@ -42,7 +42,7 @@ components:
       endpoints:
         - exposure: public
           name: 8080-tcp
-          protocol: http
+          protocol: https
           targetPort: 8080
 
           secure: true
