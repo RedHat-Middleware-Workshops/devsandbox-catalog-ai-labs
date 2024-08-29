@@ -16,10 +16,10 @@ projects:
     remotes:
       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics.git
 
-# - name: llm-basics
-#   git:
-#     remotes:
-#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics.git
+- name: llm-basics
+  git:
+    remotes:
+      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics.git
 
 
 components:
