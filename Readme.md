@@ -8,26 +8,23 @@ Update its contents accordingly.
 
 This repository represents the parent entity (Catalogue) hosting a series (categories) of labs and tutorials of different topics/technologies.
 
-The following article in _Red Hat Developers_ guides readers on how to get started to enjoy the learning material in the _Developer Sandbox_.
+<!-- The following article in _Red Hat Developers_ guides readers on how to get started to enjoy the learning material in the _Developer Sandbox_.
 
 * https://developers.redhat.com/pending-to-update-url
 
     > **Note**<br>
-    When creating a new catalogue it is most recommended to author an article in _Red Hat Developers_ to promote the new collection.
+    When creating a new catalogue it is most recommended to author an article in _Red Hat Developers_ to promote the new collection. -->
 
-## Contents
+## Available labs
 
-In these learning materials users will learn about ...
+The table below collects the labs currently available and the articles in Red Hat Developers they're based on.
 
-This catalogue contains the following learning series:
+Follow the link to the article to run the lab you're interested in.
 
-> **Note**<br>
-The list below was auto-generated, update its contents accordingly.
-
-* Camel Demo1 Labs
-  * Brief description of labs included in this category.
-* Camel Demo2 Labs
-  * Brief description of labs included in this category.
+|            Lab Name             | Preview in GitHub | Article | 
+|:--------------------------------|:-------:|:-----------------:|
+| ​​Try OpenShift AI and integrate with Apache Camel | [preview](https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics/blob/main/docs/labs/basics/walkthrough.adoc)| [link](https://developers.redhat.com/articles/2024/07/22/try-openshift-ai-and-integrate-apache-camel)
+| Tool Up your LLM with Apache Camel on OpenShift | [preview](https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics/blob/main/docs/labs/tools/walkthrough.adoc)| [link](https://developers.redhat.com/articles/2024/09/26/tutorial-tool-your-llm-apache-camel-openshift)
 
 <br/>
 

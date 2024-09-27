@@ -6,20 +6,20 @@ metadata:
 
 projects:
 
+# - name: catalog
+#   git:
+#     remotes:
+#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
+
 - name: ai-basics
   git:
     remotes:
       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics.git
 
-- name: llm-basics
-  git:
-    remotes:
-      origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics.git
-
-# - name: catalog
+# - name: llm-basics
 #   git:
 #     remotes:
-#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-catalog-ai-labs.git
+#       origin: https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics.git
 
 
 components:
@@ -37,16 +37,14 @@ components:
             -Duser.home=/home/user"
         - name: MAVEN_OPTS
           value: $(JAVA_OPTS)
-
-        # TEST
         # - name: VSCODE_DEFAULT_WORKSPACE
         #   value: "/projects/catalog/config.code-workspace"
-        
       endpoints:
         - exposure: public
           name: 8080-tcp
           protocol: https
           targetPort: 8080
+
           secure: true
           
       volumeMounts:
@@ -67,8 +65,11 @@ components:
           value: '5001'
         - name: WALKTHROUGH_LOCATIONS
           value: >-
-            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics?walkthroughsFolder=/docs/labs,
-            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics?walkthroughsFolder=/docs/labs
+            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics?walkthroughsFolder=/docs/labs
+
+#          value: >-
+#            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-ai-basics?walkthroughsFolder=/docs/labs,
+#            https://github.com/RedHat-Middleware-Workshops/devsandbox-category-llm-basics?walkthroughsFolder=/docs/labs
 
       endpoints:
         - name: tutorial
@@ -82,6 +83,7 @@ components:
         - name: tutorial-storage
           path: /opt/user-walkthroughs
 
+
   - name: m2
     volume:
       size: 2Gi
@@ -90,10 +92,10 @@ components:
     volume:
       size: 256Mi
 
+
 events:
   postStart:
     - set-camel-cli
-    - setup-lab-default
 
 commands:
   - id: set-camel-cli
@@ -101,12 +103,31 @@ commands:
       commandLine: 'source ~/.bashrc && jbang version --update && jbang cache clear && jbang app uninstall camel && jbang app install camel@apache/camel'
       component: tools
 
-  - id: setup-lab-default
-    exec:
-      commandLine: 'echo -e "export LAB_SCRIPTS=/projects/llm-basics/camel/tools/scripts\nexport PATH=\$LAB_SCRIPTS:\$PATH\nsource setup" >> ~/.bashrc'
-      component: tools
 
-  - id: setup-lab-llm-basics
-    exec:
-      commandLine: 'sed -i "/LAB_SCRIPTS=.*/c\LAB_SCRIPTS=/projects/llm-basics/camel/tools/scripts" ~/.bashrc'
-      component: tools
+# commands:
+#   - id: run-stub
+#     exec:
+#       commandLine: JAVA_HOME=$JAVA_HOME_11 mvn -Dspring-boot.run.profiles=dev -s configuration/settings.xml
+#       component: tools
+#       workingDir: "${PROJECT_SOURCE}/stubs/end1"
+
+#   - id: run-main
+#     exec:
+#       commandLine: JAVA_HOME=$JAVA_HOME_11 mvn -Dspring-boot.run.profiles=dev -s configuration/settings.xml
+#       component: tools
+#       workingDir: "${PROJECT_SOURCE}/level1simple"
+
+#   - id: send-request
+#     exec:
+#       commandLine: >-
+#         curl -H 'content-type: application/json' -d '{"id":"123"}' http://localhost:8080/camel/subscriber/details
+#       component: tools
+#       workingDir: "${PROJECT_SOURCE}"
+
+#   - id: debug-services
+#     exec:
+#       commandLine: |
+#         JAVA_HOME=$JAVA_HOME_8 mvn spring-boot:run -DskipTests \
+#         -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+#       component: tools
+#       workingDir: "${PROJECT_SOURCE}"
