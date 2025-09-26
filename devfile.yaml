@@ -98,7 +98,8 @@ events:
 commands:
   - id: set-camel-cli
     exec:
-      commandLine: 'source ~/.bashrc && jbang version --update && jbang cache clear && jbang app uninstall camel && jbang app install camel@apache/camel'
+      #commandLine: 'source ~/.bashrc && jbang version --update && jbang cache clear && jbang app uninstall camel && jbang app install camel@apache/camel'
+      commandLine: 'source ~/.bashrc && jbang version --update && jbang cache clear && jbang app uninstall camel && jbang app install -Dcamel.jbang.version=4.8.1 camel@apache/camel'
       component: tools
 
   - id: setup-lab-default
